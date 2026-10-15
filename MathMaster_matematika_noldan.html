@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f6ff">
+<title>MathMaster — Matematikani noldan o‘rgan</title>
+<style>
+:root{--bg:#f4f6ff;--paper:#fff;--ink:#182343;--muted:#687493;--line:#e0e5f2;--soft:#edf1fc;--accent:#5c62e8;--accent2:#8c63ef;--good:#16875e;--bad:#c63f55;--gold:#ffc857;--shadow:0 16px 40px #26376b12}
+:root[data-theme="dark"]{--bg:#0c1225;--paper:#151e38;--ink:#f0f3ff;--muted:#a3afd0;--line:#2a3659;--soft:#1c2848;--accent:#9296ff;--accent2:#b18cff;--good:#43d7a0;--bad:#ff8192;--gold:#ffd166;--shadow:0 16px 40px #0003}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#8b8cff20,transparent 35%),radial-gradient(ellipse at 100% 10%,#5ce0c015,transparent 30%),var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.app{max-width:1050px;margin:auto;padding:18px 16px 54px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:900;letter-spacing:-.5px}.brandmark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;display:grid;place-items:center;font-weight:900;font-size:24px;box-shadow:0 8px 20px #6c63ed40}.actions{display:flex;gap:8px}.iconbtn,.secondary{background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:13px;padding:9px 13px;font-weight:700}.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#252c66,#5355c9 55%,#8764df);border-radius:28px;padding:26px;color:white;box-shadow:0 22px 45px #4145a52b}.hero:after{content:"∑";position:absolute;right:20px;top:-34px;font-size:180px;font-weight:900;color:#ffffff12;line-height:1}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:11px;font-weight:900;color:#c9d0ff}.hero h1{font-size:clamp(27px,5vw,43px);line-height:1.12;max-width:620px;margin:8px 0 12px;letter-spacing:-1.5px}.hero p{color:#e0e4ff;max-width:600px;margin:0 0 20px}.herofoot{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.primary{border:0;background:var(--gold);color:#29244b;border-radius:13px;padding:12px 17px;font-weight:900;box-shadow:0 7px 18px #0002}.hero-stat{font-size:13px;color:#e3e6ff}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 26px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:var(--shadow)}.stat .num{font-size:25px;font-weight:900;line-height:1.25}.stat .label{font-size:12px;color:var(--muted);margin-top:4px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.sectionhead h2{font-size:22px;line-height:1.2;margin:0;letter-spacing:-.6px}.sectionhead p{margin:5px 0 0;color:var(--muted);font-size:13px}.search{width:100%;max-width:310px;background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:13px;padding:11px 13px}.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.level{background:var(--paper);border:1px solid var(--line);border-radius:21px;padding:17px;box-shadow:var(--shadow);min-width:0}.leveltop{display:flex;align-items:center;gap:12px}.levelicon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:24px;flex:none}.level h3{font-size:16px;margin:0;line-height:1.3}.level .desc{font-size:12px;color:var(--muted);margin-top:3px}.levelmeta{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--muted);margin:14px 0 7px}.track{height:7px;background:var(--soft);border-radius:9px;overflow:hidden}.track span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:9px;transition:width .3s}.topiclist{display:grid;gap:7px;margin-top:14px}.topic{width:100%;display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:12px;padding:10px 11px}.topic:hover{border-color:var(--accent)}.topic .ticon{width:25px;height:25px;border-radius:8px;background:var(--paper);display:grid;place-items:center;font-size:13px;flex:none}.topic .tname{font-weight:750;font-size:13px;flex:1}.topic .status{font-size:11px;color:var(--muted)}.topic.complete .status{color:var(--good);font-weight:900}.lessonview{max-width:760px;margin:0 auto}.backrow{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:18px}.lesson-kicker{font-size:12px;text-transform:uppercase;letter-spacing:1.3px;color:var(--accent);font-weight:900}.lessonview h1{font-size:clamp(27px,6vw,39px);line-height:1.15;letter-spacing:-1px;margin:5px 0 8px}.lessonintro{color:var(--muted);margin:0 0 20px}.lessonprogress{display:flex;align-items:center;gap:10px;margin:14px 0 22px}.lessonprogress .track{flex:1}.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:19px;margin-bottom:14px;box-shadow:var(--shadow)}.panel h2{font-size:16px;margin:0 0 9px}.panel p{margin:0 0 10px}.panel p:last-child{margin-bottom:0}.example{background:linear-gradient(135deg,#fff2c9,#ffe39a);color:#30284a;border:1px solid #f2d577;border-radius:16px;padding:15px;margin:14px 0;font-weight:700}.example small{display:block;font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:10px;margin-bottom:5px;color:#71602d}.tip{display:flex;gap:10px;background:var(--soft);border-radius:13px;padding:12px 13px;font-size:13px;color:var(--muted);margin-top:12px}.quizhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.quizhead h2{margin:0}.pill{font-size:11px;background:var(--soft);border-radius:20px;padding:5px 9px;color:var(--muted);font-weight:800}.dots{display:flex;gap:6px;margin:13px 0}.dots span{height:6px;border-radius:9px;background:var(--line);flex:1}.dots span.on{background:var(--good)}.question{font-size:clamp(22px,5vw,30px);font-weight:900;letter-spacing:-.6px;margin:17px 0;overflow-wrap:anywhere}.answerrow{display:flex;gap:9px;flex-wrap:wrap}.answer{flex:1;min-width:120px;border:1px solid var(--line);border-radius:13px;background:var(--bg);color:var(--ink);padding:12px;font-size:19px;font-weight:800}.check{border:0;border-radius:13px;background:var(--accent);color:white;padding:12px 18px;font-weight:900}.feedback{min-height:28px;font-weight:800;margin-top:10px}.feedback.good{color:var(--good)}.feedback.bad{color:var(--bad)}.hintbtn{border:0;background:none;color:var(--accent);font-weight:800;padding:8px 0}.quizactions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.hidden{display:none!important}.completebox{text-align:center;padding:20px 5px}.completeemoji{font-size:48px}.completebox h2{font-size:25px;margin:6px 0}.completebox p{color:var(--muted)}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;box-shadow:var(--shadow);z-index:5;font-weight:700;font-size:13px}.empty{color:var(--muted);padding:20px;text-align:center}
+@media(max-width:650px){.app{padding:12px 12px 40px}.hero{padding:22px 19px;border-radius:23px}.hero:after{right:-8px;top:-15px;font-size:125px}.stats{gap:8px}.stat{padding:12px 10px}.stat .num{font-size:21px}.stat .label{font-size:10px}.levels{grid-template-columns:1fr}.sectionhead{align-items:stretch;flex-direction:column}.search{max-width:none}.panel{padding:16px}.brand{font-size:16px}.brandmark{width:38px;height:38px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<script>
+const $=s=>document.querySelector(s);
+const rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const fmt=n=>Number.isInteger(n)?String(n):String(Number(n.toFixed(2))).replace('.',',');
+const levels=[
+{title:"0. Mutlaqo noldan",desc:"Raqamlar, sanash va sonlarni tushunish",icon:"🌱",color:"#ffe4a1",lessons:[
+{title:"Raqamlar 0–9",type:"digits",intro:"Raqamlar sonlarni yozish uchun ishlatiladi. Bizda 10 ta raqam bor: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. 0 — hech narsa yo‘qligini ham bildirishi mumkin.",example:"3 ta olma + yana 2 ta olma = 5 ta olma.",tip:"Avval raqamlarni tanib ol. Son — miqdorni bildiradi."},
+{title:"Sanash va sonlar ketma-ketligi",type:"count",intro:"Sanaganda har bir narsaga bittadan son mos keladi: 1, 2, 3, 4, 5… Har keyingi son bittaga katta.",example:"4 dan keyin 5 keladi, 5 dan oldin 4 keladi.",tip:"Sonlar ketma-ketligini ovoz chiqarib sanash yordam beradi."},
+{title:"Katta, kichik va teng",type:"compare",intro:"Sonlarni taqqoslash mumkin. > belgisi “katta”, < belgisi “kichik”, = belgisi “teng” degani.",example:"8 > 3, chunki 8 soni 3 dan katta.",tip:"Belgining ochiq tomoni kattaroq songa qaraydi."},
+{title:"O‘nliklar va birliklar",type:"place",intro:"Ikki xonali sonda o‘ngdagi raqam birlikni, chapdagi raqam o‘nlikni bildiradi. 34 — bu 3 ta o‘nlik va 4 ta birlik.",example:"52 = 50 + 2.",tip:"Sonni o‘nlik va birliklarga ajratib ko‘r."}]},
+{title:"1. Birinchi amallar",desc:"Qo‘shish, ayirish va son chizig‘i",icon:"➕",color:"#baf3d8",lessons:[
+{title:"Qo‘shish nima?",type:"add",intro:"Qo‘shish — miqdorlarni birlashtirish. 3 + 2 degani 3 dan boshlab yana 2 qadam oldinga yurish.",example:"7 + 5 = 12.",tip:"Katta sonni yodda tutib, kichik soncha sanash mumkin."},
+{title:"Ayirish nima?",type:"sub",intro:"Ayirish — miqdordan bir qismini olib tashlash yoki ikki son orasidagi farqni topish.",example:"9 − 4 = 5.",tip:"Ayirishda kichik sondan katta sonni ayirishni keyinroq manfiy sonlar bilan o‘rganamiz."},
+{title:"Son chizig‘i",type:"numberline",intro:"Son chizig‘ida o‘ngga yursak son ortadi, chapga yursak kamayadi. Qo‘shish — o‘ngga, ayirish — chapga harakat.",example:"6 dan 3 qadam o‘ngga: 6 + 3 = 9.",tip:"Har bir qadam bitta birlik."},
+{title:"Aralash qo‘shish-ayirish",type:"mixed",intro:"Misolda + bo‘lsa qo‘shamiz, − bo‘lsa ayiramiz. Avval belgini diqqat bilan o‘qi.",example:"15 − 6 + 2 = 11.",tip:"Har bir amalni ketma-ket bajar."}]},
+{title:"2. Hisoblash mahorati",desc:"Xonali sonlar va qulay hisoblash",icon:"🧮",color:"#c8d8ff",lessons:[
+{title:"O‘nlikdan o‘tib qo‘shish",type:"add",intro:"Sonlarni qismlarga ajratib qo‘shish qulay. Masalan, 28 + 7: avval 28 + 2 = 30, keyin yana 5 = 35.",example:"38 + 7 = 45.",tip:"Avval keyingi o‘nlikka yetkazib ol."},
+{title:"O‘nlikdan o‘tib ayirish",type:"sub",intro:"Ayirishda ham sonni qulay qismlarga bo‘lish mumkin. 42 − 7 = 42 − 2 − 5 = 35.",example:"31 − 6 = 25.",tip:"Kichik qismlarga ajratib hisobla."},
+{title:"Ikki xonali sonlarni qo‘shish",type:"add2",intro:"O‘nliklarni o‘nliklarga, birliklarni birliklarga qo‘sh. So‘ng natijalarni birlashtir.",example:"23 + 14 = 20 + 10 + 3 + 4 = 37.",tip:"Agar birliklar yig‘indisi 10 yoki undan katta bo‘lsa, o‘nlikka o‘tadi."},
+{title:"Ikki xonali sonlarni ayirish",type:"sub2",intro:"Sonlarni o‘nlik va birliklarga ajrat. Kerak bo‘lsa, bitta o‘nlikni 10 birlik sifatida ishlat.",example:"52 − 18 = 52 − 20 + 2 = 34.",tip:"Javobni qo‘shish bilan tekshir."}]},
+{title:"3. Ko‘paytirish va bo‘lish",desc:"Jadval, guruhlash va qoldiq",icon:"✖️",color:"#ffd1bd",lessons:[
+{title:"Takroriy qo‘shish",type:"mult",intro:"Ko‘paytirish bir xil sonni qayta-qayta qo‘shishni qisqartiradi. 4 × 3 — uchta 4 ni qo‘shish.",example:"4 × 3 = 4 + 4 + 4 = 12.",tip:"a × b va b × a natijasi bir xil."},
+{title:"Ko‘paytirish jadvali",type:"table",intro:"Ko‘paytirish jadvali tez hisoblashga yordam beradi. 2 ga ko‘paytirish — sonni ikki marta olish, 10 ga ko‘paytirish esa butun sonlarda oxiriga 0 qo‘shadi.",example:"7 × 6 = 42.",tip:"Jadvalni oz-ozdan mashq qil."},
+{title:"Bo‘lish — teng taqsimlash",type:"div",intro:"Bo‘lish narsalarni teng guruhlarga ajratadi. 12 ÷ 3 — 12 narsani 3 teng guruhga ajratish.",example:"24 ÷ 6 = 4.",tip:"Javobni bo‘luvchiga ko‘paytirib tekshir."},
+{title:"Bo‘lish va qoldiq",type:"remainder",intro:"Ba’zan narsalarni teng taqsimlaganda ortib qoladi. Bu ortgan miqdor qoldiq deyiladi.",example:"14 ÷ 4 = 3, qoldiq 2.",tip:"Qoldiq bo‘luvchidan kichik bo‘lishi kerak."},
+{title:"Amallar tartibi",type:"order",intro:"Qavslardan boshlaymiz, keyin ko‘paytirish va bo‘lishni, so‘ng qo‘shish va ayirishni bajaramiz.",example:"3 + 2 × 4 = 3 + 8 = 11.",tip:"Qavs natijani o‘zgartirishi mumkin: (3 + 2) × 4 = 20."}]},
+{title:"4. Kasrlar va o‘nli sonlar",desc:"Butun va uning qismlari",icon:"🍕",color:"#ffcfdb",lessons:[
+{title:"Kasr nima?",type:"fraction",intro:"Kasr butunning teng qismlarini bildiradi. 1/4 — to‘rtta teng qismdan bittasi. Pastdagi son nechta qismga bo‘linganini ko‘rsatadi.",example:"1/2 — yarim, 1/4 — chorak.",tip:"Qismlar teng bo‘lishi muhim."},
+{title:"Kasrlarni taqqoslash",type:"fraccompare",intro:"Maxraji bir xil kasrlarda surati katta bo‘lsa, kasr ham kattaroq. Masalan, 3/5 > 1/5.",example:"4/7 > 2/7.",tip:"Avval maxrajlar tengmi, tekshir."},
+{title:"Kasrni qisqartirish",type:"simplify",intro:"Surat va maxrajni bir xil songa bo‘lsak, kasr qiymati o‘zgarmaydi. Bu kasrni qisqartirish deyiladi.",example:"4/8 = 1/2, chunki ikkalasini ham 4 ga bo‘ldik.",tip:"Surat va maxrajning umumiy bo‘luvchisini izla."},
+{title:"O‘nli kasrlar",type:"decimal",intro:"Verguldan keyingi raqamlar kasr qismini bildiradi. 0,5 — yarim, 0,25 — chorak. Vergullarni bir ustunga keltirib hisobla.",example:"1,5 + 0,25 = 1,75.",tip:"Javobda vergul yoki nuqtadan foydalanish mumkin."},
+{title:"Kasrlarni qo‘shish",type:"fracadd",intro:"Maxrajlari bir xil kasrlarni qo‘shganda suratlarni qo‘shamiz, maxraj esa o‘zgarishsiz qoladi.",example:"2/7 + 3/7 = 5/7.",tip:"Maxrajlar har xil bo‘lsa, avval umumiy maxraj topiladi."}]},
+{title:"5. Foiz, nisbat va manfiy sonlar",desc:"Kundalik hayotdagi matematika",icon:"📊",color:"#e0d0ff",lessons:[
+{title:"Manfiy sonlar",type:"negative",intro:"Noldan kichik sonlar manfiy sonlar deyiladi. Son chizig‘ida ular nolning chap tomonida joylashadi.",example:"−3 < 2. −2 + 5 = 3.",tip:"Nol o‘rtadagi chegara sifatida tasavvur qil."},
+{title:"Foiz nima?",type:"percent",intro:"Foiz — yuzdan bir qism. 50% — yarmi, 25% — choragi, 10% — o‘ndan biri.",example:"200 ning 10% i = 20.",tip:"p% ni topish uchun sonni p ga ko‘paytirib, 100 ga bo‘lish mumkin."},
+{title:"Foizni topish",type:"percentany",intro:"Sonning p foizi = son × p ÷ 100. Masalan, 80 ning 25 foizi 80 × 25 ÷ 100 = 20.",example:"60 ning 20% i = 12.",tip:"25% — sonning to‘rtdan biri."},
+{title:"Nisbat va proporsiya",type:"ratio",intro:"Nisbat ikki miqdorni solishtiradi. 2:3 degani birinchi miqdorga 2 qism, ikkinchisiga 3 qism to‘g‘ri keladi.",example:"2:3 nisbatda jami 5 qism bor.",tip:"Nisbatni bir xil songa ko‘paytirib yoki bo‘lib soddalashtirish mumkin."}]},
+{title:"6. Algebra asoslari",desc:"Harflar, ifodalar va tenglamalar",icon:"𝒙",color:"#c9e7ff",lessons:[
+{title:"O‘zgaruvchi nima?",type:"variable",intro:"Harflar noma’lum yoki o‘zgaradigan sonni ifodalashi mumkin. x + 3 ifodasi x soniga 3 qo‘shilganini bildiradi.",example:"x = 4 bo‘lsa, x + 3 = 7.",tip:"Harfining o‘rniga berilgan qiymatni qo‘y."},
+{title:"Ifodaning qiymati",type:"expression",intro:"Ifodaning qiymatini topish uchun harflar o‘rniga sonlarni qo‘yib, amallar tartibida hisoblaymiz.",example:"2x + 1, x=3 bo‘lsa: 2×3+1=7.",tip:"Ko‘paytirish belgisi ba’zan yozilmaydi: 2x = 2 × x."},
+{title:"Oddiy tenglama",type:"equation",intro:"Tenglama noma’lum son qatnashgan tenglik. x + 5 = 12 bo‘lsa, x ni yolg‘iz qoldirish uchun ikkala tomondan 5 ayiramiz.",example:"x + 5 = 12 → x = 7.",tip:"Tenglikning ikki tomonida ham bir xil amalni bajar."},
+{title:"Ko‘paytmali tenglama",type:"equationmult",intro:"3x = 21 degani 3 × x = 21. x ni topish uchun ikkala tomonni 3 ga bo‘lamiz.",example:"4x = 28 → x = 7.",tip:"x oldidagi ko‘paytuvchini teskari amal bilan yo‘qot."},
+{title:"Qavslarni ochish",type:"distribute",intro:"Qavs oldidagi son qavs ichidagi har bir hadga ko‘paytiriladi.",example:"3(x + 2) = 3x + 6.",tip:"Har bir hadga ko‘paytirishni unutma."}]},
+{title:"7. Geometriya",desc:"Shakllar, burchaklar, yuza va hajm",icon:"📐",color:"#c6f1e9",lessons:[
+{title:"Nuqta, kesma va burchak",type:"angle",intro:"Nuqta joyni, kesma ikki nuqta orasidagi to‘g‘ri chiziq qismini bildiradi. Burchak ikki nur orasida hosil bo‘ladi.",example:"To‘g‘ri burchak 90° ga teng.",tip:"Burchaklar gradus bilan o‘lchanadi."},
+{title:"Perimetr",type:"perimeter",intro:"Perimetr — shaklning barcha tomonlari uzunliklari yig‘indisi. To‘g‘ri to‘rtburchak uchun P = 2(a + b).",example:"Tomonlari 5 va 3: P = 2(5+3) = 16.",tip:"Perimetr birliklari: sm, m va hokazo."},
+{title:"To‘g‘ri to‘rtburchak yuzi",type:"area",intro:"Yuza shakl egallagan sirt miqdori. To‘g‘ri to‘rtburchak yuzi S = a × b.",example:"5 sm × 4 sm = 20 sm².",tip:"Yuza kvadrat birliklarda o‘lchanadi."},
+{title:"Uchburchak yuzi",type:"triangle",intro:"Uchburchak yuzi asos va balandlik ko‘paytmasining yarmiga teng: S = a × h ÷ 2.",example:"Asos 8, balandlik 5: S = 8×5÷2 = 20.",tip:"Balandlik asosga tik bo‘ladi."},
+{title:"Aylana va doira",type:"circle",intro:"Aylana uzunligi C = 2πr, doira yuzi S = πr². Bu yerda r — radius, π taxminan 3,14.",example:"r=2 bo‘lsa, aylana uzunligi taxminan 12,56.",tip:"Radius markazdan aylana chetigacha bo‘lgan masofa."}]},
+{title:"8. O‘rta daraja",desc:"Darajalar, ildizlar, koordinatalar va statistika",icon:"🚀",color:"#ffdfb1",lessons:[
+{title:"Daraja",type:"power",intro:"Daraja bir sonni o‘ziga necha marta ko‘paytirishni bildiradi. 3² = 3×3 = 9.",example:"2³ = 2×2×2 = 8.",tip:"Daraja ko‘rsatkichi ko‘paytirishlar sonini bildiradi."},
+{title:"Kvadrat ildiz",type:"root",intro:"Kvadrat ildiz — kvadrati berilgan songa teng bo‘lgan musbat son. √25 = 5, chunki 5² = 25.",example:"√49 = 7.",tip:"Kvadrat sonlarni eslab qolish foydali."},
+{title:"Koordinata tekisligi",type:"coordinate",intro:"Nuqta (x, y) juftligi bilan belgilanadi. Avval x bo‘yicha gorizontal, keyin y bo‘yicha vertikal harakat qilinadi.",example:"(3, 2): o‘ngga 3, yuqoriga 2.",tip:"Koordinatalar tartibi muhim: avval x, keyin y."},
+{title:"O‘rtacha arifmetik",type:"mean",intro:"O‘rtacha qiymatni topish uchun barcha sonlarni qo‘shib, sonlar miqdoriga bo‘lamiz.",example:"2, 4, 6 ning o‘rtachasi = 12 ÷ 3 = 4.",tip:"O‘rtacha har doim berilgan sonlardan biriga teng bo‘lishi shart emas."},
+{title:"Tezlik, masofa, vaqt",type:"speed",intro:"Masofa = tezlik × vaqt. Tezlik = masofa ÷ vaqt. Vaqt = masofa ÷ tezlik.",example:"Soatiga 60 km tezlikda 2 soatda 120 km yuriladi.",tip:"Hisoblashdan oldin birliklar mosligini tekshir."}]},
+{title:"9. Yuqori daraja",desc:"Pifagor, funksiya, ehtimollik va trigonometriya",icon:"🧠",color:"#d7c8ff",lessons:[
+{title:"Pifagor teoremasi",type:"pythagoras",intro:"To‘g‘ri burchakli uchburchakda katetlar kvadratlari yig‘indisi gipotenuza kvadratiga teng: a²+b²=c².",example:"Katetlar 3 va 4: c²=9+16=25, c=5.",tip:"Gipotenuza — to‘g‘ri burchak qarshisidagi eng uzun tomon."},
+{title:"Funksiya",type:"function",intro:"Funksiya har bir x qiymatiga y qiymatini mos qo‘yadi. Masalan y=2x: x ni 2 ga ko‘paytiramiz.",example:"x=4 bo‘lsa, y=8.",tip:"Jadval tuzish funksiya qiymatlarini ko‘rishga yordam beradi."},
+{title:"Chiziqli tenglama",type:"linear",intro:"ax+b=c ko‘rinishidagi tenglamada avval b ni teskari amal bilan olib tashlaymiz, so‘ng a ga bo‘lamiz.",example:"2x+4=14 → 2x=10 → x=5.",tip:"Amallarni teskari tartibda bekor qil."},
+{title:"Ehtimollik",type:"probability",intro:"Bir xil imkoniyatli natijalarda ehtimollik = qulay natijalar soni ÷ barcha natijalar soni.",example:"Oddiy kubikda 6 tushish ehtimoli 1/6.",tip:"Ehtimollik 0 dan 1 gacha bo‘ladi."},
+{title:"Trigonometriyaga kirish",type:"trig",intro:"To‘g‘ri burchakli uchburchakda sin burchak = qarshi katet ÷ gipotenuza, cos = yon katet ÷ gipotenuza.",example:"3–4–5 uchburchakda kichik burchakka qarshi katet 3 bo‘lsa, sin = 3/5.",tip:"Avval tomonlarning burchakka nisbatan qaysi biri ekanini aniqlang."}]}
+];
+let progress={};try{progress=JSON.parse(localStorage.getItem("mathmaster-progress")||"{}")}catch(e){}
+let theme=localStorage.getItem("mathmaster-theme")||"light";document.documentElement.dataset.theme=theme;
+let active=null,question=null,streak=0,toastTimer;
+const allLessons=()=>levels.flatMap((l,li)=>l.lessons.map((s,si)=>({...s,li,si,key:li+"-"+si,level:l.title})));
+function save(){try{localStorage.setItem("mathmaster-progress",JSON.stringify(progress))}catch(e){}}
+function totalDone(){return allLessons().filter(x=>progress[x.key]?.done).length}
+function showToast(msg){let t=$("#toast");if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.append(t)}t.textContent=msg;t.classList.remove("hidden");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.add("hidden"),1900)}
+function header(){return `<header class="top"><div class="brand"><div class="brandmark">∑</div><span>MathMaster</span></div><div class="actions"><button class="iconbtn" id="themeBtn" aria-label="Mavzuni almashtirish">${theme==="dark"?"☀️":"🌙"}</button></div></header>`}
+function home(){
+ active=null;const all=allLessons(),done=totalDone(),pct=Math.round(done/all.length*100),xp=all.filter(x=>progress[x.key]?.done).length*30;
+ $("#app").innerHTML=header()+`<section class="hero"><div class="eyebrow">SENING MATEMATIKA SAYOHATING</div><h1>Matematikani<br>noldan o‘rgan.</h1><p>Eng oddiy raqamlardan boshlaymiz. Har bir darsda tushuntirish, yechilgan misol va mashqlar bor. O‘z tezligingda o‘rgan!</p><div class="herofoot"><button class="primary" id="continueBtn">${done?"Davom etish →":"Birinchi darsni boshlash →"}</button><span class="hero-stat">📚 ${all.length} ta dars · 🎯 Har darsda 3 ta to‘g‘ri javob</span></div></section>
+<div class="stats"><div class="stat"><div class="num">${pct}%</div><div class="label">Umumiy natija</div></div><div class="stat"><div class="num">${done}/${all.length}</div><div class="label">Tugatilgan darslar</div></div><div class="stat"><div class="num">⭐ ${xp}</div><div class="label">Tajriba ballari</div></div></div>
+<div class="sectionhead"><div><h2>O‘quv yo‘li</h2><p>Bo‘limlarni ketma-ket o‘rganishing mumkin.</p></div><input class="search" id="search" placeholder="🔎 Dars yoki mavzu qidirish…" aria-label="Darslarni qidirish"></div><div class="levels" id="levels"></div><div class="footer">MathMaster · O‘rganish uchun yaratilgan<br>Natijalar shu qurilma brauzerida saqlanadi.</div>`;
+$("#themeBtn").onclick=toggleTheme;
+$("#continueBtn").onclick=()=>{const next=all.find(x=>!progress[x.key]?.done)||all[0];openLesson(next.key)};
+renderLevels("");
+$("#search").addEventListener("input",e=>renderLevels(e.target.value.trim().toLowerCase()));
+}
+function renderLevels(query){
+ const el=$("#levels");if(!el)return;let count=0;
+ el.innerHTML=levels.map((l,li)=>{
+ const filtered=l.lessons.map((s,si)=>({...s,si,key:li+"-"+si})).filter(s=>(l.title+" "+l.desc+" "+s.title).toLowerCase().includes(query));
+ if(!filtered.length)return "";count++;
+ const done=l.lessons.filter((s,si)=>progress[li+"-"+si]?.done).length,p=Math.round(done/l.lessons.length*100);
+ return `<section class="level"><div class="leveltop"><div class="levelicon" style="background:${l.color}">${l.icon}</div><div><h3>${l.title}</h3><div class="desc">${l.desc}</div></div></div><div class="levelmeta"><span>${done}/${l.lessons.length} dars tugallangan</span><strong>${p}%</strong></div><div class="track"><span style="width:${p}%"></span></div><div class="topiclist">${filtered.map(s=>`<button class="topic ${progress[s.key]?.done?"complete":""}" data-key="${s.key}"><span class="ticon">${progress[s.key]?.done?"✓":"▶"}</span><span class="tname">${s.title}</span><span class="status">${progress[s.key]?.done?"O‘tilgan":"Boshlash →"}</span></button>`).join("")}</div></section>`
+ }).join("");
+ el.querySelectorAll("[data-key]").forEach(b=>b.onclick=()=>openLesson(b.dataset.key));
+ if(!count)el.innerHTML='<div class="empty">Bu so‘z bilan dars topilmadi. Boshqa so‘z bilan qidirib ko‘r.</div>';
+}
+function toggleTheme(){theme=theme==="dark"?"light":"dark";document.documentElement.dataset.theme=theme;try{localStorage.setItem("mathmaster-theme",theme)}catch(e){}if(active)openLesson(active.key);else home()}
+function questionFor(s){
+ let a,b,c,q,ans,ex;
+ switch(s.type){
+ case"digits":a=rand(0,9);return{q:`Qaysi raqam ${a+1} dan bitta kichik?`,a:a,ex:`${a+1} dan bitta kichik son ${a}.`};
+ case"count":a=rand(1,18);return{q:`${a} dan keyingi son qaysi?`,a:a+1,ex:`Sanashda ${a} dan keyin ${a+1} keladi.`};
+ case"compare":a=rand(1,30);b=rand(1,30);return{q:`${a} va ${b} sonlaridan kattasini yoz.`,a:Math.max(a,b),ex:`Kattasi ${Math.max(a,b)}.`};
+ case"place":a=rand(1,9);b=rand(0,9);return{q:`${a}${b} sonida nechta o‘nlik bor?`,a:a,ex:`${a}${b} = ${a*10} + ${b}, demak ${a} ta o‘nlik.`};
+ case"add":a=rand(1,60);b=rand(1,40);return{q:`${a} + ${b} = ?`,a:a+b,ex:`${a}+${b}=${a+b}.`};
+ case"sub":a=rand(15,99);b=rand(1,Math.min(a,45));return{q:`${a} − ${b} = ?`,a:a-b,ex:`${a}−${b}=${a-b}.`};
+ case"numberline":a=rand(1,20);b=rand(1,9);return{q:`${a} dan ${b} qadam o‘ngga yursak, qaysi songa kelamiz?`,a:a+b,ex:`O‘ngga yurish qo‘shish: ${a}+${b}=${a+b}.`};
+ case"mixed":a=rand(10,35);b=rand(2,9);c=rand(1,8);return{q:`${a} − ${b} + ${c} = ?`,a:a-b+c,ex:`${a}−${b}=${a-b}; ${a-b}+${c}=${a-b+c}.`};
+ case"add2":a=rand(12,65);b=rand(11,29);return{q:`${a} + ${b} = ?`,a:a+b,ex:`O‘nlik va birliklarni qo‘shamiz: ${a}+${b}=${a+b}.`};
+ case"sub2":a=rand(35,90);b=rand(11,Math.min(30,a-1));return{q:`${a} − ${b} = ?`,a:a-b,ex:`${a}−${b}=${a-b}.`};
+ case"mult":a=rand(2,9);b=rand(2,9);return{q:`${a} × ${b} = ?`,a:a*b,ex:`${a}×${b}=${Array(b).fill(a).join(" + ")}=${a*b}.`};
+ case"table":a=rand(2,12);b=rand(2,12);return{q:`${a} × ${b} = ?`,a:a*b,ex:`${a}×${b}=${a*b}.`};
+ case"div":a=rand(2,12);b=rand(2,12);return{q:`${a*b} ÷ ${a} = ?`,a:b,ex:`Bo‘lishni ko‘paytirish bilan tekshiramiz: ${a}×${b}=${a*b}.`};
+ case"remainder":a=rand(2,9);b=rand(2,5);c=rand(1,a-1);return{q:`${a*b+c} ni ${a} ga bo‘lgandagi qoldiq qancha?`,a:c,ex:`${a}×${b}=${a*b}; yana ${c} ortib qoladi.`};
+ case"order":a=rand(2,8);b=rand(2,8);c=rand(1,10);return{q:`${c} + ${a} × ${b} = ?`,a:c+a*b,ex:`Avval ko‘paytirish: ${a}×${b}=${a*b}; keyin +${c}=${c+a*b}.`};
+ case"fraction":a=rand(2,8);return{q:`${a} ta teng qismdan bittasi qanday kasr? Suratini yoz (1/${a}).`,a:1,ex:`Bitta qism ${"1/"+a} deb yoziladi; surati 1.`};
+ case"fraccompare":a=rand(1,4);b=rand(a+1,8);c=rand(1,4);return{q:`Qaysi kasr katta: ${b>0?a+"/"+b:""} yoki ${c+"/"+b}? Faqat kattaroq kasr suratini yoz.`,a:Math.max(a,c),ex:`Maxrajlar bir xil, kattaroq suratli kasr kattaroq.`};
+ case"simplify":a=rand(2,8);return{q:`${a*2}/${a*4} kasrining qisqartirilgan maxraji qancha?`,a:2,ex:`Surat va maxrajni ${a*2} ga bo‘lsak, 1/2 chiqadi. Maxraj 2.`};
+ case"decimal":a=rand(1,9)/2;b=rand(1,9)/4;return{q:`${fmt(a)} + ${fmt(b)} = ?`,a:Number((a+b).toFixed(2)),ex:`Vergullarni tenglashtiramiz: ${fmt(a)}+${fmt(b)}=${fmt(a+b)}.`};
+ case"fracadd":a=rand(1,4);b=rand(1,4);c=rand(5,9);return{q:`${a}/${c} + ${b}/${c} = ? Suratni yoz.`,a:a+b,ex:`Maxraj o‘zgarmaydi: ${a}/${c}+${b}/${c}=${a+b}/${c}.`};
+ case"negative":a=rand(-9,-1);b=rand(2,12);return{q:`${a} + ${b} = ?`,a:a+b,ex:`Noldan ${Math.abs(a)} chapda turib, ${b} qadam o‘ngga yuramiz: ${a+b}.`};
+ case"percent":a=rand(2,20)*10;return{q:`${a} ning 10% i qancha?`,a:a/10,ex:`10% topish uchun 10 ga bo‘lamiz: ${a}÷10=${a/10}.`};
+ case"percentany":a=rand(2,20)*5;b=[10,20,25,50][rand(0,3)];return{q:`${a} ning ${b}% i qancha?`,a:a*b/100,ex:`${a}×${b}÷100=${a*b/100}.`};
+ case"ratio":a=rand(2,5);b=rand(2,5);return{q:`${a}:${b} nisbatida jami nechta qism bor?`,a:a+b,ex:`Jami qismlar: ${a}+${b}=${a+b}.`};
+ case"variable":a=rand(1,12);b=rand(1,12);return{q:`x=${a} bo‘lsa, x + ${b} = ?`,a:a+b,ex:`x o‘rniga ${a} qo‘yamiz: ${a}+${b}=${a+b}.`};
+ case"expression":a=rand(1,10);b=rand(1,8);c=rand(1,9);return{q:`${a}x + ${c}, x=${b}. Qiymati?`,a:a*b+c,ex:`${a}×${b}+${c}=${a*b+c}.`};
+ case"equation":a=rand(2,30);b=rand(2,20);return{q:`x + ${b} = ${a+b}. x = ?`,a:a,ex:`x=${a+b}−${b}=${a}.`};
+ case"equationmult":a=rand(2,12);b=rand(2,9);return{q:`${b}x = ${a*b}. x = ?`,a:a,ex:`x=${a*b}÷${b}=${a}.`};
+ case"distribute":a=rand(2,8);b=rand(1,9);return{q:`${a}(x + ${b}) ifodada doimiy had qancha?`,a:a*b,ex:`${a}×x + ${a}×${b} = ${a}x + ${a*b}.`};
+ case"angle":a=[30,45,60,90,120,180][rand(0,5)];return{q:`To‘g‘ri burchak necha gradus?`,a:90,ex:`To‘g‘ri burchak har doim 90°.`};
+ case"perimeter":a=rand(2,12);b=rand(2,10);return{q:`Tomonlari ${a} va ${b} bo‘lgan to‘g‘ri to‘rtburchak perimetri?`,a:2*(a+b),ex:`P=2(a+b)=2(${a}+${b})=${2*(a+b)}.`};
+ case"area":a=rand(2,12);b=rand(2,10);return{q:`Tomonlari ${a} va ${b} bo‘lgan to‘g‘ri to‘rtburchak yuzi?`,a:a*b,ex:`S=a×b=${a}×${b}=${a*b}.`};
+ case"triangle":a=rand(2,10)*2;b=rand(2,10);return{q:`Asosi ${a}, balandligi ${b}. Uchburchak yuzi?`,a:a*b/2,ex:`S=a×h÷2=${a}×${b}÷2=${a*b/2}.`};
+ case"circle":a=rand(1,5);return{q:`Radiusi ${a} bo‘lgan doira yuzi taxminan qancha? (π=3,14)`,a:Number((3.14*a*a).toFixed(2)),ex:`S=πr²=3,14×${a}×${a}=${fmt(3.14*a*a)}.`};
+ case"power":a=rand(2,6);b=rand(2,3);return{q:`${a} ning ${b}-darajasi nechaga teng?`,a:Math.pow(a,b),ex:`${a}^${b} = ${Array(b).fill(a).join("×")} = ${Math.pow(a,b)}.`};
+ case"root":a=rand(2,12);return{q:`√${a*a} = ?`,a:a,ex:`${a}×${a}=${a*a}, shuning uchun √${a*a}=${a}.`};
+ case"coordinate":a=rand(-4,8);b=rand(-4,8);return{q:`Nuqta (${a}, ${b}) da x koordinatasi qancha?`,a:a,ex:`Juftlikda birinchi son x koordinatasi: ${a}.`};
+ case"mean":a=rand(1,10);b=rand(1,10);c=rand(1,10);return{q:`${a}, ${b}, ${c} sonlarining o‘rtacha arifmetigi?`,a:Number(((a+b+c)/3).toFixed(2)),ex:`(${a}+${b}+${c})÷3=${fmt((a+b+c)/3)}.`};
+ case"speed":a=rand(2,12)*10;b=rand(1,5);return{q:`Tezlik ${a} km/soat, vaqt ${b} soat. Masofa qancha (km)?`,a:a*b,ex:`Masofa=tezlik×vaqt=${a}×${b}=${a*b} km.`};
+ case"pythagoras":a=rand(2,6);b=rand(2,6);return{q:`Katetlar ${3*a} va ${4*a} bo‘lsa, gipotenuza qancha?`,a:5*a,ex:`Pifagor: c²=(3a)²+(4a)²=25a², demak c=${5*a}.`};
+ case"function":a=rand(-5,10);b=rand(2,5);return{q:`y=${b}x bo‘lsa, x=${a}. y = ?`,a:b*a,ex:`y=${b}×${a}=${b*a}.`};
+ case"linear":a=rand(2,10);b=rand(1,12);c=rand(2,8);return{q:`${c}x + ${b} = ${c*a+b}. x = ?`,a:a,ex:`${c}x=${c*a}; x=${c*a}÷${c}=${a}.`};
+ case"probability":a=rand(2,6);return{q:`Adolatli kubikda nechta turli natija bor?`,a:6,ex:`Kubikning 1, 2, 3, 4, 5, 6 natijalari bor — jami 6.`};
+ case"trig":a=rand(1,8);return{q:`Sinus ta’rifida qarshi katet 3, gipotenuza 5. sin qiymatining suratini yoz (3/5).`,a:3,ex:`sin = qarshi katet ÷ gipotenuza = 3/5. Surat 3.`};
+ default:return{q:"2 + 2 = ?",a:4,ex:"2+2=4."}
+ }
+}
+function openLesson(key){
+ const [li,si]=key.split("-").map(Number),s=levels[li].lessons[si];active={key,li,si,s};let state=progress[key]||{best:0};let correct=0,locked=false;question=questionFor(s);
+ const total=allLessons().length,lessonNum=allLessons().findIndex(x=>x.key===key)+1;
+ $("#app").innerHTML=header()+`<div class="lessonview"><div class="backrow"><button class="secondary" id="backBtn">← O‘quv yo‘li</button><span class="pill">DARS ${lessonNum}/${total}</span></div><div class="lesson-kicker">${levels[li].icon} ${levels[li].title}</div><h1>${s.title}</h1><p class="lessonintro">Shoshilma. Tushuntirishni o‘qi, misolni ko‘r va keyin o‘zing yechib ko‘r.</p><div class="lessonprogress"><div class="track"><span style="width:${state.done?100:0}%"></span></div><span class="pill">${state.done?"✓ Tugallangan":"Yangi dars"}</span></div>
+<section class="panel"><h2>📘 Tushuntirish</h2><p>${s.intro}</p><div class="tip"><span>💡</span><span>${s.tip}</span></div></section><div class="example"><small>Yechilgan misol</small>${s.example}</div>
+<section class="panel" id="quiz"><div class="quizhead"><h2>✍️ O‘zingni sinab ko‘r</h2><span class="pill" id="scorepill">0 / 3</span></div><div class="dots" id="dots"><span></span><span></span><span></span></div><div class="question" id="question"></div><div class="answerrow"><input class="answer" id="answer" inputmode="decimal" autocomplete="off" placeholder="Javobing…" aria-label="Javobing"><button class="check" id="check">Tekshirish</button></div><div class="feedback" id="feedback" aria-live="polite"></div><button class="hintbtn" id="hint">💡 Yechimga ishora</button><div class="quizactions"><button class="secondary" id="newq">Boshqa misol ↻</button><span class="pill">3 ta to‘g‘ri javob kerak</span></div></section><section class="panel hidden" id="finish"></section><div class="quizactions"><button class="secondary" id="prev">← Oldingi dars</button><button class="secondary" id="next">Keyingi dars →</button></div></div>`;
+ $("#themeBtn").onclick=toggleTheme;$("#backBtn").onclick=home;$("#prev").onclick=()=>moveLesson(-1);$("#next").onclick=()=>moveLesson(1);
+ $("#hint").onclick=()=>{const f=$("#feedback");f.className="feedback";f.textContent="Ishora: "+question.ex};
+ $("#newq").onclick=()=>{question=questionFor(s);$("#question").textContent=question.q;$("#answer").value="";$("#feedback").textContent="";$("#answer").focus()};
+ $("#check").onclick=checkAnswer;$("#answer").addEventListener("keydown",e=>{if(e.key==="Enter")checkAnswer()});
+ $("#question").textContent=question.q;
+ if(state.done){$("#finish").classList.remove("hidden");$("#finish").innerHTML=`<div class="completebox"><div class="completeemoji">🏆</div><h2>Bu darsni o‘tgansan!</h2><p>Yana mashq qilishing yoki keyingi darsga o‘tishing mumkin.</p><button class="check" id="redo">Qayta mashq qilish</button></div>`;$("#redo").onclick=()=>openLesson(key)}
+ window.scrollTo(0,0);
+ function checkAnswer(){
+  if(locked)return;const input=$("#answer"),f=$("#feedback"),v=input.value.trim().replace(",",".");
+  if(v===""){f.className="feedback bad";f.textContent="Javobni avval yoz.";return}
+  const num=Number(v);if(!Number.isFinite(num)){f.className="feedback bad";f.textContent="Javobni son bilan yoz.";return}
+  if(Math.abs(num-question.a)<1e-8){
+   correct++;streak++;$("#scorepill").textContent=correct+" / 3";$("#dots").children[correct-1].classList.add("on");f.className="feedback good";f.textContent="To‘g‘ri! "+question.ex;
+   if(correct>=3){locked=true;progress[key]={done:true,best:Math.max(state.best||0,correct)};save();$("#finish").classList.remove("hidden");$("#finish").innerHTML=`<div class="completebox"><div class="completeemoji">🎉</div><h2>Ajoyib! Dars tugadi.</h2><p>3 ta masalani to‘g‘ri yechding. +30 tajriba balli!</p><button class="check" id="finishNext">Keyingi dars →</button></div>`;$("#finishNext").onclick=()=>moveLesson(1);$("#check").disabled=true;$("#check").style.opacity=".55";$("#newq").disabled=true;$("#newq").style.opacity=".55";$("#hint").classList.add("hidden");$("#finish").scrollIntoView({behavior:"smooth",block:"center"});}
+   else{question=questionFor(s);$("#question").textContent=question.q;input.value="";setTimeout(()=>{if(!locked){f.textContent="Keyingi masalaga tayyormisan?";input.focus()}},250)}
+  }else{streak=0;f.className="feedback bad";f.textContent="Hali to‘g‘ri emas. Ishorani ko‘r yoki qayta hisoblab ko‘r."}
+ }
+}
+function moveLesson(delta){const all=allLessons(),idx=all.findIndex(x=>x.key===active.key),n=all[idx+delta];if(n)openLesson(n.key);else if(delta>0){showToast("Oxirgi darsga yetding!");home()}else showToast("Bu birinchi dars.")}
+home();
+</script>
+</body>
+</html>
